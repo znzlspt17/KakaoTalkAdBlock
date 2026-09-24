@@ -5,8 +5,6 @@ package main
 import (
 	"context"
 	"kakaotalkadblock/internal"
-
-	_ "kakaotalkadblock/winres"
 )
 
 func main() {

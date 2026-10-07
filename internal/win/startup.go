@@ -40,7 +40,8 @@ func SetStartupEnabled(enable bool) error {
 		if err != nil {
 			return err
 		}
-		return k.SetStringValue(appName, exe)
+		// 공백이 포함된 경로도 하나의 실행 파일 경로로 처리한다.
+		return k.SetStringValue(appName, `"`+exe+`"`)
 	} else {
 		return k.DeleteValue(appName)
 	}
